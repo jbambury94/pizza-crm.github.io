@@ -523,6 +523,14 @@
             account: {
               id: account_id || 'ACCOUNT-UNIQUE-ID',
             },
+            guides: {
+        delay: false,
+        disabled: false,
+        globalScripts: [
+            {
+                script: function(step, guide) {
+                    console.log('Step ', step.id, ' has run');
+                },
           });
         })('YOUR-PENDO-API-KEY-HERE');
       }
